@@ -17,6 +17,8 @@ export const metadata = pageMetadata({
   title: "Contabilidad y Asesoría Tributaria en Quito",
   description: "Servicios contables y tributarios para personas naturales, emprendedores y sociedades. SRI, nómina, RUC, RIMPE y estados financieros.",
   path: "/contabilidad-tributaria-quito",
+  keywords: ["contador Quito", "asesoría contable Quito", "asesoría tributaria Quito", "declaraciones SRI", "servicios contables para empresas", "regularización tributaria"],
+  section: "Contabilidad y tributación",
 });
 
 const problems = [

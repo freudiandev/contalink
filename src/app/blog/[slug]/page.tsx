@@ -20,7 +20,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  return pageMetadata({ title: post.title, description: post.description, path: `/blog/${post.slug}` });
+  return pageMetadata({
+    title: post.title,
+    description: post.description,
+    path: `/blog/${post.slug}`,
+    keywords: [post.category, ...post.title.replace(/[¿?():]/g, "").split(" ").filter((word) => word.length > 4)],
+    type: "article",
+    publishedTime: "2026-01-15T08:00:00-05:00",
+    modifiedTime: "2026-06-12T15:00:00-05:00",
+    section: post.category,
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {

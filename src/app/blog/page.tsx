@@ -9,6 +9,8 @@ export const metadata = pageMetadata({
   title: "Blog de Firma Electrónica, Contabilidad y SRI Ecuador",
   description: "Guías claras y actualizadas sobre firma electrónica, SRI, RIMPE y contabilidad para emprendedores en Ecuador.",
   path: "/blog",
+  keywords: ["blog SRI Ecuador", "guías firma electrónica", "noticias tributarias Ecuador", "contabilidad para emprendedores"],
+  section: "Educación financiera y digital",
 });
 
 export default function BlogPage() {

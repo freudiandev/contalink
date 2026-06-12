@@ -18,7 +18,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "ContaLink | Contabilidad y Firma Electrónica Ecuador", template: "%s | ContaLink" },
   description: site.description,
+  keywords: site.keywords,
   applicationName: "ContaLink",
+  authors: [{ name: site.founder, url: site.url }],
+  creator: site.founder,
+  publisher: site.name,
+  referrer: "origin-when-cross-origin",
+  formatDetection: { email: false, address: false, telephone: false },
   manifest: `${basePath}/manifest.webmanifest`,
   icons: { icon: `${basePath}/icon.svg`, apple: `${basePath}/icon.svg` },
 };

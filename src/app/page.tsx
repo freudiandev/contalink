@@ -10,6 +10,8 @@ export const metadata = pageMetadata({
   title: "ContaLink | Firma Electrónica y Contabilidad en Ecuador",
   description: "Firma electrónica Uanataca y asesoría contable y tributaria en Quito, con atención digital para todo Ecuador.",
   path: "/",
+  keywords: ["ContaLink Ecuador", "firma electrónica Quito", "contador en Quito", "asesoría SRI"],
+  section: "Servicios profesionales",
 });
 
 export default function HomePage() {

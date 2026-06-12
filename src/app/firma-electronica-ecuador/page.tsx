@@ -21,6 +21,8 @@ export const metadata = pageMetadata({
   title: "Firma Electrónica Ecuador | Uanataca en Archivo y Token",
   description: "Obtén tu firma electrónica Uanataca en Ecuador con ContaLink. Archivo P12 o token, soporte personalizado y asesoría para SRI, empresas y profesionales.",
   path: "/firma-electronica-ecuador",
+  keywords: ["comprar firma electrónica Ecuador", "firma electrónica archivo P12", "firma electrónica token", "certificado digital Ecuador", "firma para facturación electrónica"],
+  section: "Firma electrónica",
 });
 
 const uses = [

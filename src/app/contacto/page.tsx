@@ -12,6 +12,8 @@ export const metadata = pageMetadata({
   title: "Contacto | ContaLink Quito Ecuador",
   description: "Contacta a ContaLink para firma electrónica Uanataca, contabilidad, tributación, nómina y trámites empresariales.",
   path: "/contacto",
+  keywords: ["contacto ContaLink", "WhatsApp firma electrónica Ecuador", "contactar contador Quito"],
+  section: "Contacto",
 });
 
 export default function ContactPage() {

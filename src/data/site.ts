@@ -6,6 +6,16 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description:
     "Firma ecuatoriana de asesoría contable, tributaria y firmas electrónicas Uanataca, con atención digital en todo Ecuador.",
+  keywords: [
+    "firma electrónica Ecuador",
+    "firma electrónica Uanataca",
+    "firma electrónica SRI",
+    "contabilidad Quito",
+    "asesoría tributaria Ecuador",
+    "servicios contables Quito",
+    "RUC Ecuador",
+    "RIMPE Ecuador",
+  ],
   slogan: "Transformamos tus números en soluciones contables inteligentes.",
   whatsapp: "593969709230",
   whatsappDisplay: "096 970 9230",
