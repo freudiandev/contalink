@@ -1,0 +1,32 @@
+x-contalink: &contalink
+  build:
+    context: .
+    dockerfile: Dockerfile
+  environment:
+    NODE_ENV: production
+    NEXT_PUBLIC_SITE_URL: http://localhost:3000
+  expose:
+    - "3000"
+  restart: unless-stopped
+
+services:
+  contalink-1:
+    <<: *contalink
+
+  contalink-2:
+    <<: *contalink
+
+  contalink-3:
+    <<: *contalink
+
+  proxy:
+    image: nginx:1.27-alpine
+    depends_on:
+      - contalink-1
+      - contalink-2
+      - contalink-3
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: unless-stopped

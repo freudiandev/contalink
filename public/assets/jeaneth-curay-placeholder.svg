@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs><radialGradient id="g" cx="50%" cy="28%"><stop stop-color="#3b3217"/><stop offset=".48" stop-color="#171717"/><stop offset="1" stop-color="#050505"/></radialGradient></defs>
+  <rect width="900" height="1200" fill="url(#g)"/>
+  <circle cx="450" cy="390" r="150" fill="#292929" stroke="#D4AF37" stroke-opacity=".3"/>
+  <path d="M185 1050c25-310 155-455 265-455s240 145 265 455" fill="#202020" stroke="#D4AF37" stroke-opacity=".25"/>
+  <text x="450" y="1115" fill="#F5D76E" font-family="sans-serif" font-size="30" text-anchor="middle" letter-spacing="5">FOTO PROFESIONAL</text>
+</svg>
