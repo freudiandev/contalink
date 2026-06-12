@@ -36,9 +36,9 @@ jobs:
 
       - name: Build static site
         env:
-          GITHUB_PAGES: "true"
+          GITHUB_SHA: ${{ github.sha }}
           NEXT_PUBLIC_SITE_URL: https://freudiandev.github.io/contalink
-        run: npm run build
+        run: npm run build:pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

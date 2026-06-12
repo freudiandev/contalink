@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { JsonLd } from "@/components/JsonLd";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { DeploymentUpdater } from "@/components/DeploymentUpdater";
 import { baseSchema } from "@/lib/schema";
 import { site } from "@/data/site";
 
@@ -28,6 +29,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es" className={`${montserrat.variable} ${openSans.variable}`}>
       <body>
+        <DeploymentUpdater
+          basePath={basePath}
+          buildId={process.env.NEXT_PUBLIC_BUILD_ID}
+        />
         <AnimatedBackground />
         <a href="#contenido" className="skip-link">Saltar al contenido</a>
         <Header />
