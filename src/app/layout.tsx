@@ -11,14 +11,15 @@ import { site } from "@/data/site";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const basePath = process.env.GITHUB_PAGES === "true" ? "/contalink" : "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "ContaLink | Contabilidad y Firma Electrónica Ecuador", template: "%s | ContaLink" },
   description: site.description,
   applicationName: "ContaLink",
-  manifest: "/manifest.webmanifest",
-  icons: { icon: "/icon.svg", apple: "/icon.svg" },
+  manifest: `${basePath}/manifest.webmanifest`,
+  icons: { icon: `${basePath}/icon.svg`, apple: `${basePath}/icon.svg` },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#050505", colorScheme: "dark" };

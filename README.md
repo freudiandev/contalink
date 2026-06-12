@@ -7,9 +7,10 @@ Sitio web corporativo de ContaLink para servicios de firma electrónica Uanataca
 - Next.js 15 con App Router
 - TypeScript
 - Tailwind CSS 4
-- Framer Motion
+- p5.js
 - Metadata API y JSON-LD
 - Docker
+- GitHub Pages mediante GitHub Actions
 
 ## Ejecutar con Docker
 
@@ -42,6 +43,24 @@ npm run lint
 npm run typecheck
 npm run build
 npm start
+```
+
+## Publicar en GitHub Pages
+
+El workflow `.github/workflows/deploy-pages.yml` genera una exportación estática
+y la publica automáticamente al hacer `push` a `main`.
+
+En GitHub, abre **Settings > Pages** y selecciona **GitHub Actions** como fuente
+de publicación. El sitio quedará disponible en:
+
+```text
+https://freudiandev.github.io/contalink/
+```
+
+Para comprobar localmente la misma exportación:
+
+```bash
+npm run build:pages
 ```
 
 ## Rutas
