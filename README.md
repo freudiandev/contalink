@@ -10,7 +10,7 @@ Sitio web corporativo de ContaLink para servicios de firma electrónica Uanataca
 - p5.js
 - Metadata API y JSON-LD
 - Docker
-- GitHub Pages mediante GitHub Actions
+- Vercel
 
 ## Ejecutar con Docker
 
@@ -45,22 +45,22 @@ npm run build
 npm start
 ```
 
-## Publicar en GitHub Pages
+## Publicar en Vercel
 
-El workflow `.github/workflows/deploy-pages.yml` genera una exportación estática
-y la publica automáticamente al hacer `push` a `main`.
+El proyecto está preparado para desplegarse como una aplicación Next.js en
+Vercel. Cada `push` a `main` genera un despliegue de producción cuando el
+repositorio está conectado desde el panel de Vercel.
 
-En GitHub, abre **Settings > Pages** y selecciona **GitHub Actions** como fuente
-de publicación. El sitio quedará disponible en:
-
-```text
-https://freudiandev.github.io/contalink/
-```
-
-Para comprobar localmente la misma exportación:
+Configura esta variable de entorno para Production, Preview y Development:
 
 ```bash
-npm run build:pages
+NEXT_PUBLIC_SITE_URL=https://ecuadorfirma.me
+```
+
+También puedes publicar manualmente con la CLI:
+
+```bash
+vercel --prod
 ```
 
 ## Rutas
@@ -83,11 +83,5 @@ npm run build:pages
 ## Assets
 
 Los placeholders están en `public/assets`. Sustitúyelos por los archivos finales del cliente manteniendo nombres claros y dimensiones adecuadas. La interfaz actual no depende de que existan imágenes raster, por lo que no se rompe si todavía no fueron entregadas.
-
-Antes de publicar, configura la URL real:
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://tudominio.com
-```
 
 También conviene actualizar los enlaces sociales en `src/data/site.ts` y confirmar precios, certificaciones y textos legales con la cliente.
