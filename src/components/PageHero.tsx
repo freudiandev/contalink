@@ -10,8 +10,8 @@ export function PageHero({ whatsappHref }: Props) {
     <div className="container hero-grid">
       <div className="hero-copy">
         <p className="eyebrow">Asesoría tributaria · Ecuador</p>
-        <h1>Devolución de impuestos ante el SRI <span className="text-gradient">en Ecuador</span></h1>
-        <p>Revisamos tu caso, organizamos tus documentos y te acompañamos en la solicitud de devolución de Impuesto a la Renta, IVA, retenciones, ISD y otros valores ante el SRI.</p>
+        <h1>Convierte tus impuestos en <span className="text-gradient">oportunidades financieras</span></h1>
+        <p>Somos especialistas en procesos tributarios; te ayudamos a recuperar capital, fortalecer tu liquidez y presentar solicitudes de devolución ante el SRI con sustento documental.</p>
         <div className="hero-actions"><CTAButton href={whatsappHref} external>Revisar mi caso por WhatsApp</CTAButton><CTAButton href="#tipos" variant="outline">Ver tipos de devolución</CTAButton></div>
         <p className="tax-microcopy">Diagnóstico tributario personalizado. La aprobación final depende del SRI.</p>
         <div className="hero-badges">{badges.map((badge) => <Badge key={badge}>{badge}</Badge>)}</div>

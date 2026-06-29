@@ -19,7 +19,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { site } from "@/data/site";
 
 const path = "/devolucion-impuestos-sri-ecuador";
-const description = "ContaLink te ayuda a revisar, preparar y presentar solicitudes de devolución de impuestos ante el SRI en Ecuador: Impuesto a la Renta, IVA, retenciones, adultos mayores, discapacidad, exportadores e ISD.";
+const description = "ContaLink ofrece soluciones especializadas en recuperación de impuestos y asesoría contable, tributaria y financiera en Ecuador para ayudarte a fortalecer tu liquidez.";
 
 export const metadata = pageMetadata({
   title: "Devolución de Impuestos SRI Ecuador | Impuesto a la Renta e IVA",
@@ -55,7 +55,11 @@ export default function TaxRefundPage() {
     <JsonLd data={schema} />
     <PageHero whatsappHref={whatsappHref} />
 
-    <Section className="!pt-8" eyebrow="Respuesta directa" title="¿Qué es la devolución de impuestos en Ecuador?">
+    <Section className="!pt-8" eyebrow="Recuperación tributaria" title="Haz que cada valor a tu favor vuelva a tu empresa">
+      <div className="answer-block"><div><p>En ContaLink ofrecemos soluciones especializadas en recuperación de impuestos y asesoría contable, tributaria y financiera en Ecuador. Más de 8 años de experiencia respaldan nuestro compromiso de ayudar a empresas y personas a maximizar su liquidez y tomar mejores decisiones financieras.</p></div><div className="answer-meta"><div><span>Experiencia</span><strong>8+ años</strong></div><div><span>Enfoque</span><strong>Liquidez</strong></div><div><span>Soporte</span><strong>Documental</strong></div><div><span>Cobertura</span><strong>Ecuador</strong></div></div></div>
+    </Section>
+
+    <Section eyebrow="Respuesta directa" title="¿Qué es la devolución de impuestos en Ecuador?">
       <div className="answer-block"><div><p>La devolución de impuestos es un procedimiento mediante el cual un contribuyente puede solicitar al SRI la restitución de valores cuando existe saldo a favor, pago indebido, pago en exceso o un beneficio tributario aplicable. Puede relacionarse con Impuesto a la Renta, IVA, ISD u otros impuestos, según el tipo de contribuyente y la documentación disponible.</p></div><div className="answer-meta"><div><span>Autoridad</span><strong>SRI</strong></div><div><span>Evaluación</span><strong>Individual</strong></div><div><span>Soporte</span><strong>Documental</strong></div><div><span>Cobertura</span><strong>Ecuador</strong></div></div></div>
     </Section>
 
@@ -71,7 +75,7 @@ export default function TaxRefundPage() {
 
     <Section eyebrow="Antes de presentar" title="Errores comunes que conviene evitar"><CommonMistakes items={refundMistakes} /></Section>
 
-    <Section><CTASection title="¿No sabes si tienes derecho a devolución?" text="En ContaLink podemos revisar tu caso y orientarte antes de iniciar una solicitud ante el SRI." whatsappHref={whatsappHref} secondaryHref="/contacto" secondaryLabel="Solicitar diagnóstico tributario" /></Section>
+    <Section><CTASection title="¿No sabes si tienes derecho a devolución?" text="Somos especialistas en procesos tributarios; te ayudamos a recuperar capital y fortalecer tu liquidez antes de iniciar una solicitud ante el SRI." whatsappHref={whatsappHref} secondaryHref="/contacto" secondaryLabel="Solicitar diagnóstico tributario" /></Section>
 
     <Section eyebrow="Respuestas citables" title="Lo esencial, explicado con claridad" description="Respuestas breves para comprender el trámite antes de tomar una decisión.">
       <div className="answer-cards">{answers.map(([question, answer]) => <article key={question}><FileSearch size={20} /><h3>{question}</h3><p>{answer}</p></article>)}</div>
@@ -86,6 +90,6 @@ export default function TaxRefundPage() {
 
     <Section eyebrow="Consulta y verificación" title="Información basada en fuentes oficiales del SRI" description="Consulta las fichas oficiales y confirma la normativa y los requisitos vigentes antes de presentar una solicitud."><SourceCards sources={taxRefundSources} /><p className="legal-note">La información tributaria puede cambiar. Recomendamos revisar cada caso con asesoría profesional y fuentes oficiales vigentes.</p></Section>
 
-    <Section><CTASection title="Recuperar valores ante el SRI empieza con una revisión correcta" text="Antes de ingresar una solicitud, revisa si cumples los requisitos, si existe sustento documental y cuál es el canal adecuado para tu caso. ContaLink te acompaña con asesoría tributaria clara y personalizada." whatsappHref={whatsappHref} /></Section>
+    <Section><CTASection title="Haz que cada valor a tu favor vuelva a tu empresa" text="Antes de ingresar una solicitud, revisa si cumples los requisitos, si existe sustento documental y cuál es el canal adecuado para tu caso. ContaLink te acompaña con asesoría tributaria clara y personalizada." whatsappHref={whatsappHref} /></Section>
   </>;
 }

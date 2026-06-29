@@ -1,4 +1,4 @@
-import { FileSignature, Landmark, ArrowRight, ShieldCheck, MapPin } from "lucide-react";
+import { FileSignature, Landmark, ArrowRight, ShieldCheck, MapPin, BadgeDollarSign } from "lucide-react";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
 import { JsonLd } from "@/components/JsonLd";
@@ -35,7 +35,7 @@ export default function HomePage() {
               ContaLink transforma tus números en soluciones contables inteligentes y tus trámites en procesos digitales seguros.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
             <Link href="/firma-electronica-ecuador" className="group premium-card flex min-h-[260px] flex-col justify-between">
               <div className="flex items-start justify-between">
                 <div className="card-icon"><FileSignature /></div><span className="eyebrow">01 · Digital</span>
@@ -54,6 +54,16 @@ export default function HomePage() {
                 <h2 className="font-display text-2xl md:text-3xl">Necesito asesoría contable</h2>
                 <p className="mt-3 max-w-md text-sm leading-7 text-muted">Contabilidad, SRI, nómina, RUC, RIMPE y gestión empresarial con acompañamiento cercano.</p>
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-gold-soft">Explorar asesoría contable <ArrowRight className="transition-transform group-hover:translate-x-1" size={18} /></span>
+              </div>
+            </Link>
+            <Link href="/devolucion-impuestos-sri-ecuador" className="group premium-card flex min-h-[260px] flex-col justify-between">
+              <div className="flex items-start justify-between">
+                <div className="card-icon"><BadgeDollarSign /></div><span className="eyebrow">03 · Liquidez</span>
+              </div>
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl">Recuperación de impuestos</h2>
+                <p className="mt-3 max-w-md text-sm leading-7 text-muted">Convierte valores a tu favor en oportunidades financieras con revisión tributaria y acompañamiento ante el SRI.</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-gold-soft">Explorar devolución de impuestos <ArrowRight className="transition-transform group-hover:translate-x-1" size={18} /></span>
               </div>
             </Link>
           </div>
