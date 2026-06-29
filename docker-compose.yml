@@ -2,9 +2,11 @@ x-contalink: &contalink
   build:
     context: .
     dockerfile: Dockerfile
+    args:
+      NEXT_PUBLIC_SITE_URL: https://ecuadorfirma.me
   environment:
     NODE_ENV: production
-    NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    NEXT_PUBLIC_SITE_URL: https://ecuadorfirma.me
   expose:
     - "3000"
   restart: unless-stopped
