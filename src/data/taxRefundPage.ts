@@ -10,7 +10,7 @@ export const refundAudiences = [
 ] as const;
 
 export const refundTypes = [
-  { title: "Impuesto a la Renta", items: ["Pago indebido", "Pago en exceso", "Saldo a favor", "Retenciones", "Gastos personales", "Anexo de gastos personales", "Cuenta bancaria registrada", "Declaración presentada"] },
+  { title: "Impuesto a la Renta", items: ["Pago indebido", "Pago en exceso", "Retenciones", "CREDITO TRIBUTARIO A FAVOR"] },
   { title: "IVA", items: ["Adultos mayores", "Personas con discapacidad", "Retenciones en la fuente de IVA", "Exportadores", "Pago indebido o pago en exceso de IVA"] },
   { title: "ISD", items: ["Revisión de pagos al exterior", "Crédito tributario", "Documentos probatorios", "Solicitudes con firma física o electrónica"] },
   { title: "Otros casos", items: ["Revisión de normativa aplicable", "Diagnóstico de viabilidad", "Organización documental"] },
