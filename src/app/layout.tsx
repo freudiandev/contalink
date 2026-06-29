@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   formatDetection: { email: false, address: false, telephone: false },
   manifest: `${basePath}/manifest.webmanifest`,
-  icons: { icon: `${basePath}/icon.svg`, apple: `${basePath}/icon.svg` },
+  icons: { icon: `${basePath}/icon.png`, apple: `${basePath}/icon.png` },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#050505", colorScheme: "dark" };

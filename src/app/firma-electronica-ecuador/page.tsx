@@ -3,25 +3,23 @@ import { HeroSignatureReveal } from "@/components/HeroSignatureReveal";
 import { Badge } from "@/components/Badge";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
-import { ServiceCard } from "@/components/ServiceCard";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { RequirementsTabs } from "@/components/RequirementsTabs";
 import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
+import { SignaturePricingAssistant } from "@/components/SignaturePricingAssistant";
 import { signatureFaqs } from "@/data/faqs";
-import { signatureProducts } from "@/data/services";
 import { signaturePrices } from "@/data/prices";
 import { pageMetadata } from "@/data/seo";
 import { breadcrumbSchema, faqSchema, graphSchema } from "@/lib/schema";
 import { whatsappUrl } from "@/lib/whatsapp";
-import type { ComponentProps } from "react";
 
 export const metadata = pageMetadata({
   title: "Firma Electrónica Ecuador | Uanataca en Archivo y Token",
   description: "Obtén tu firma electrónica Uanataca en Ecuador con ContaLink. Archivo P12 o token, soporte personalizado y asesoría para SRI, empresas y profesionales.",
   path: "/firma-electronica-ecuador",
-  keywords: ["comprar firma electrónica Ecuador", "firma electrónica archivo P12", "firma electrónica token", "certificado digital Ecuador", "firma para facturación electrónica"],
+  keywords: ["comprar firma electrónica Ecuador", "firma electrónica archivo P12", "firma electrónica token", "certificado digital Ecuador", "firma para facturación electrónica", "firma electrónica para persona natural", "firma electrónica para representante legal", "firma electrónica para empresas", "firma electrónica en la nube"],
   section: "Firma electrónica",
 });
 
@@ -53,11 +51,11 @@ export default function SignaturePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Tu firma digital, segura y lista para trabajar</p>
-            <h1>Firma electrónica Uanataca en Ecuador, <span className="text-gradient">rápida y con soporte</span></h1>
+            <h1>Firma electrónica Proveedor Uanataca en Ecuador, <span className="text-gradient">rápida y con soporte</span></h1>
             <p>Gestionamos tu firma electrónica en archivo P12 o token para firmar documentos, facturar electrónicamente y realizar trámites digitales con validez legal.</p>
             <div className="hero-actions">
               <CTAButton href={whatsappUrl("signature")} external>Solicitar mi firma electrónica</CTAButton>
-              <CTAButton href="#requisitos" variant="outline">Ver requisitos</CTAButton>
+              <CTAButton href="#precios" variant="outline">Ver opciones</CTAButton>
             </div>
             <div className="hero-badges">
               {["Distribuidor Uanataca", "Archivo P12 y Token", "Atención en Ecuador", "Soporte por WhatsApp"].map((badge) => <Badge key={badge}>{badge}</Badge>)}
@@ -82,13 +80,11 @@ export default function SignaturePage() {
         </div>
       </Section>
 
-      <Section id="productos" eyebrow="Soluciones digitales" title="Elige la modalidad que encaja con tu forma de trabajar" description="Te explicamos las diferencias antes de emitir para que tomes una decisión informada.">
-        <div className="cards-grid cols-4">
-          {signatureProducts.map((product) => <ServiceCard key={product.title} {...product} icon={product.icon as ComponentProps<typeof ServiceCard>["icon"]} />)}
-        </div>
+      <Section id="precios" eyebrow="Modalidades disponibles" title="Elige tu firma electrónica sin confundirte" description="Te explicamos en palabras simples la diferencia entre P12/Nube y Token para que escojas la opción correcta.">
+        <SignaturePricingAssistant />
       </Section>
 
-      <Section eyebrow="Comparativa clara" title="Archivo P12 vs. token USB" description="Ambas opciones permiten firmar digitalmente. La diferencia está en el almacenamiento, la movilidad y el control de acceso.">
+      <Section eyebrow="Comparativa clara" title="P12/Nube vs. Token USB" description="Ambas opciones permiten firmar digitalmente. Revisa esta tabla para entender las diferencias clave de un vistazo.">
         <ComparisonTable />
       </Section>
 
@@ -105,13 +101,6 @@ export default function SignaturePage() {
             ["Recibe soporte", "Te acompañamos en la instalación y uso inicial de tu firma."],
           ].map(([title, text]) => <article className="step-card" key={title}><h3>{title}</h3><p>{text}</p></article>)}
         </div>
-      </Section>
-
-      <Section id="precios" eyebrow="Vigencias disponibles" title="Una firma para cada etapa" description="Consulta el valor vigente según modalidad, perfil y duración del certificado.">
-        <div className="price-grid">
-          {signaturePrices.map((price) => <article className={`price-card ${price.featured ? "featured" : ""}`} key={price.duration}><span>Vigencia</span><h3>{price.duration}</h3><p>{price.file ?? "Consultar"}</p></article>)}
-        </div>
-        <p className="mt-5 text-sm leading-7 text-muted">Los valores pueden variar según tipo de firma, vigencia y modalidad. Escríbenos para confirmar el precio actualizado.</p>
       </Section>
 
       <Section eyebrow="Aplicaciones" title="Una identidad digital para tus trámites" description="ContaLink atiende personas naturales, profesionales, emprendedores y empresas en Ecuador.">
@@ -138,9 +127,9 @@ export default function SignaturePage() {
       <Section className="!pt-0">
         <div className="cta-band">
           <p className="eyebrow">Atención digital en Ecuador</p>
-          <h2>Tu firma lista para trabajar, con soporte de principio a fin</h2>
-          <p>Te guiamos paso a paso para que puedas continuar tus trámites con tranquilidad.</p>
-          <div className="hero-actions"><CTAButton href={whatsappUrl("signature")} external>Solicitar por WhatsApp</CTAButton><CTAButton href="#requisitos" variant="outline">Ver requisitos</CTAButton></div>
+          <h2>¿Todavía no sabes cuál firma necesitas?</h2>
+          <p>Envíanos un mensaje por WhatsApp y te ayudamos a elegir la opción correcta según tu trámite.</p>
+          <div className="hero-actions"><CTAButton href={whatsappUrl("signature_help")} external>Hablar con un asesor</CTAButton><CTAButton href="#requisitos" variant="outline">Ver requisitos</CTAButton></div>
         </div>
       </Section>
     </>

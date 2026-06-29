@@ -31,6 +31,7 @@ export const site = {
 export const navigation = [
   { href: "/firma-electronica-ecuador", label: "Firma electrónica" },
   { href: "/contabilidad-tributaria-quito", label: "Contabilidad" },
+  { href: "/devolucion-impuestos-sri-ecuador", label: "Devolución de IVA" },
   { href: "/blog", label: "Blog" },
   { href: "/contacto", label: "Contacto" },
 ];

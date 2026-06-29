@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["", 1, "weekly"],
     ["/firma-electronica-ecuador", .95, "weekly"],
     ["/contabilidad-tributaria-quito", .95, "weekly"],
+    ["/devolucion-impuestos-sri-ecuador", .95, "weekly"],
     ["/blog", .8, "weekly"],
     ["/contacto", .7, "monthly"],
     ["/politica-de-privacidad", .2, "yearly"],

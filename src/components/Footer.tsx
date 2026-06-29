@@ -18,6 +18,7 @@ export function Footer() {
           <h3 className="footer-title">Servicios</h3>
           <div className="footer-links">
             {navigation.slice(0, 2).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+            <Link href="/devolucion-impuestos-sri-ecuador">Devolución de impuestos SRI</Link>
             <Link href="/contabilidad-tributaria-quito#servicios">Nómina y SRI</Link>
             <Link href="/firma-electronica-ecuador#productos">Archivo P12 y token</Link>
           </div>

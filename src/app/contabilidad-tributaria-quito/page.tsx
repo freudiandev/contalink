@@ -1,4 +1,5 @@
-import { AlertTriangle, ClipboardList, CircleDollarSign, Files, Landmark, Receipt, ShieldAlert, Waypoints, GraduationCap, Award, BadgeCheck } from "lucide-react";
+import Image from "next/image";
+import { AlertTriangle, ClipboardList, CircleDollarSign, Files, Landmark, Receipt, ShieldAlert, Waypoints, GraduationCap, Award, BadgeCheck, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/Badge";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
@@ -54,10 +55,10 @@ export default function AccountingPage() {
             <div className="hero-badges">{["Desde 2018", "Quito · Ecuador", "Personas y sociedades", "Asesoría financiera"].map((b) => <Badge key={b}>{b}</Badge>)}</div>
           </div>
           <div className="signature-visual">
-            <div className="absolute inset-[8%] rounded-t-[12rem] border border-gold/20 bg-[radial-gradient(circle_at_50%_25%,rgba(212,175,55,.18),transparent_34%),linear-gradient(180deg,#171717,#080808)]" />
-            <div className="relative z-10 mx-auto flex aspect-[4/5] w-[72%] max-w-[330px] flex-col justify-end overflow-hidden rounded-t-[10rem] border border-white/10 bg-gradient-to-b from-transparent to-black p-7">
-              <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(rgba(212,175,55,.07)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,.07)_1px,transparent_1px)] [background-size:28px_28px]" />
-              <div className="relative"><p className="eyebrow">Dirección profesional</p><strong className="mt-2 block font-display text-2xl">Ing. Jeaneth Curay</strong><span className="mt-2 block text-xs text-muted">Contabilidad · Auditoría · Tributación</span></div>
+            <div className="relative z-10 mx-auto flex aspect-square w-full max-w-[400px] flex-col justify-end overflow-hidden rounded-2xl border border-gold/30 p-7 shadow-[0_20px_50px_-12px_rgba(212,175,55,0.4)] transition-shadow duration-500 hover:shadow-[0_20px_60px_-10px_rgba(212,175,55,0.6)]">
+              <Image src="/assets/ceo.jpeg" alt="Ing. Jeaneth Curay" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 400px" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+              <div className="relative"><p className="eyebrow text-gold-light text-shadow-sm">Dirección profesional</p><strong className="mt-2 block font-display text-2xl text-white">Ing. Jeaneth Curay</strong><span className="mt-2 block text-xs text-gold">Contabilidad · Auditoría · Tributación</span></div>
             </div>
           </div>
         </div>
@@ -85,7 +86,25 @@ export default function AccountingPage() {
       </Section>
 
       <Section eyebrow="Diagnóstico" title="Problemas que resolvemos contigo" description="No necesitas llegar con el problema explicado en términos contables. Empezamos por entender tu situación.">
-        <div className="cards-grid cols-4">{problems.map(([Icon, title]) => <article className="premium-card" key={title}><div className="card-icon"><Icon /></div><h3>{title}</h3><p>Revisamos el caso y definimos el siguiente paso con claridad.</p></article>)}</div>
+        <div className="cards-grid cols-4">
+          {problems.map(([Icon, title]) => (
+            <article className="premium-card flex min-h-[220px] flex-col justify-between" key={title}>
+              <div>
+                <div className="card-icon"><Icon /></div>
+                <h3>{title}</h3>
+                <p className="mt-2 text-sm text-muted">Revisamos el caso y definimos el siguiente paso con claridad.</p>
+              </div>
+              <a 
+                href={whatsappUrl("accounting", `Hola ContaLink, ${title.toLowerCase()}`)} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mt-5 flex items-center gap-2 text-xs font-bold text-gold-soft transition-colors hover:text-white"
+              >
+                Consultar en WhatsApp <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section id="servicios" eyebrow="Servicios integrales" title="Contabilidad que conecta cumplimiento y estrategia" description="Centraliza tus procesos contables, tributarios, laborales y digitales con acompañamiento profesional.">

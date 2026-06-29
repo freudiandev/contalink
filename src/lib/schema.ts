@@ -7,7 +7,7 @@ const organization = {
   name: site.name,
   legalName: site.legalName,
   url: site.url,
-  logo: `${site.url}/icon.svg`,
+  logo: `${site.url}/icon.png`,
   image: `${site.url}/social-image`,
   description: site.description,
   founder: { "@type": "Person", name: site.founder },
