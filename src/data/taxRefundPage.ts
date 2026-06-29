@@ -3,7 +3,7 @@ import { BriefcaseBusiness, Building2, Factory, HandHeart, PersonStanding, UserR
 export const refundAudiences = [
   [UserRound, "Personas naturales", "Trabajadores, profesionales o contribuyentes con retenciones, gastos personales, saldo a favor o pagos superiores a lo que correspondía."],
   [BriefcaseBusiness, "Emprendedores y negocios", "Negocios que necesitan revisar declaraciones, retenciones, crédito tributario y cumplimiento ante el SRI."],
-  [Building2, "Sociedades", "Empresas que requieren analizar pagos en exceso, retenciones, anexos, conciliaciones y documentación contable."],
+  [Building2, "Sociedades", "Empresas que requieren analizar pagos indebidos, pagos en exceso, retenciones o crédito tributario a favor."],
   [PersonStanding, "Adultos mayores", "Personas de 65 años o más que pueden acceder a devolución de IVA por compras elegibles, según requisitos del SRI."],
   [HandHeart, "Personas con discapacidad", "Personas calificadas o sustitutos autorizados que pueden solicitar devolución de IVA según requisitos aplicables."],
   [Factory, "Exportadores", "Exportadores que podrían recuperar IVA pagado en adquisiciones relacionadas con su actividad, conforme a las reglas del SRI."],
